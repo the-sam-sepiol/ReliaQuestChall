@@ -38,7 +38,7 @@ public class EmployeeService {
         return newEmployee;
     }
 
-    //use immutable Set.of(). for creation, and forEach to populate the concurrent hash map
+    // use immutable Set.of(). for creation, and forEach to populate the concurrent hash map
     private void initMockData() {
         Set.of(
                         new EmployeeDto("Ethan", "Anderson", 65000, 20, "Systems Engineer", "ethan.anderson@email.com"),

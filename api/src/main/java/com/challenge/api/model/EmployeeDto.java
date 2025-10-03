@@ -18,10 +18,10 @@ public class EmployeeDto implements Employee {
     public EmployeeDto() {} // default constructor
 
     public EmployeeDto(String firstName, String lastName, Integer salary, Integer age, String jobTitle, String email) {
-        this.uuid = UUID.randomUUID();  //use randomUUID() to assign UUID to employee
+        this.uuid = UUID.randomUUID(); // use randomUUID() to assign UUID to employee
         this.firstName = firstName;
         this.lastName = lastName;
-        //updated when first or last are updated via updateFullName()
+        // updated when first or last are updated via updateFullName()
         this.fullName = firstName + " " + lastName;
         this.salary = salary;
         this.age = age;
@@ -29,7 +29,7 @@ public class EmployeeDto implements Employee {
         this.email = email;
         this.contractHireDate = Instant.now();
         // if null -> active
-        this.contractTerminationDate = null; 
+        this.contractTerminationDate = null;
     }
 
     @Override
@@ -50,7 +50,7 @@ public class EmployeeDto implements Employee {
     @Override
     public void setFirstName(String firstName) {
         this.firstName = firstName;
-        //ensure full name stays updated (same for last name)
+        // ensure full name stays updated (same for last name)
         updateFullName();
     }
 
